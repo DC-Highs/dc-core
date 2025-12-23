@@ -1,15 +1,15 @@
-import orbRecallReturnSetting from "./orb-recall-return"
-import feedCostsSetting from "./feed-costs"
-import elementsSetting from "./elements"
-import islandsSetting from "./islands"
-import dragonsSetting from "./dragons"
-import soundsSetting from "./sounds"
+import { orbRecallReturnSettings } from "./orb-recall-return"
+import { feedCostSettings } from "./feed-costs"
+import { elementSettings } from "./elements"
+import { islandSettings } from "./islands"
+import { dragonSettings } from "./dragons"
+import { soundSettings } from "./sounds"
 
 export {
-    orbRecallReturnSetting,
-    feedCostsSetting,
-    elementsSetting,
-    islandsSetting,
-    dragonsSetting,
-    soundsSetting
+    orbRecallReturnSettings,
+    feedCostSettings,
+    elementSettings,
+    islandSettings,
+    dragonSettings,
+    soundSettings
 }
