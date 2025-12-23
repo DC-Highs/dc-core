@@ -9,6 +9,7 @@ import { DragonRarity } from "./dragon-rarity"
 import { DragonElement } from "./dragon-element"
 import { DragonPhase } from "./dragon-phase"
 import { DragonRank } from "./dragon-rank"
+import { IslandType } from "./island-type"
 
 export {
     StaticFileUrlPlatformPrefix,
@@ -21,5 +22,6 @@ export {
     DragonRarity,
     DragonElement,
     DragonPhase,
-    DragonRank
+    DragonRank,
+    IslandType,
 }
