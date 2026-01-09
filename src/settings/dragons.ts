@@ -138,17 +138,17 @@ export const dragonSettings = {
         },
         oneStarPower: .38223,
         categoryPowers: {
-            1: 3200,
-            2: 3600,
-            3: 4000,
-            4: 4800,
-            5: 5600,
-            6: 5000,
-            7: 4500,
-            8: 3000,
-            9: 6000,
-            10: 7300,
-            11: 9000
+            [DragonCategory.Basic]: 3200,
+            [DragonCategory.ProBasic]: 3600,
+            [DragonCategory.PreAdvanced]: 4000,
+            [DragonCategory.Advanced]: 4800,
+            [DragonCategory.Elite]: 5600,
+            [DragonCategory.Amazing]: 5000,
+            [DragonCategory.Charming]: 4500,
+            [DragonCategory.Graceful]: 3000,
+            [DragonCategory.Champion]: 6000,
+            [DragonCategory.Mythical]: 7300,
+            [DragonCategory.Heroic]: 9000
         },
         damageVariant: [.9, 1.1]
     }

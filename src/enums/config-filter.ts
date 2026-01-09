@@ -1,4 +1,4 @@
-export enum ConfigFilterItem {
+export enum ConfigFilter {
     Chests = "chests",
     Items = "items",
     Levels = "levels",
