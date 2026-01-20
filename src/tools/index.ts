@@ -6,6 +6,7 @@ import { validateDragonStars } from "./validate-dragon-stars"
 import { validateElementName } from "./validate-element-name"
 import { validateDragonLevel } from "./validate-dragon-level"
 import { validateDragonRank } from "./validate-dragon-rank"
+import { DragonStaticFileUrlParser } from "./dragon-static-file-url-parser"
 
 export {
     validateDragonLevelCompatibilityWithStars,
@@ -16,4 +17,5 @@ export {
     validateElementName,
     validateDragonLevel,
     validateDragonRank,
+    DragonStaticFileUrlParser,
 }
