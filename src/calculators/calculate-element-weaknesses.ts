@@ -1,10 +1,17 @@
 import { validateElementName } from "../tools/validate-element-name"
 import { elementSettings } from "../settings/elements"
+import { DragonElement } from "../enums"
 
 export function calculateElementWeaknesses(element: string) {
     validateElementName(element, { throwOnError: true })
-    const elementKey = element as keyof typeof elementSettings
-    const elementSetting = elementSettings[elementKey]
-    const elementWeaknesses = elementSetting.weaknesses
-    return elementWeaknesses
+
+    const weaknesses: DragonElement[] = []
+
+    for (const element in elementSettings) {
+        if ((elementSettings[element as DragonElement].strengths as DragonElement[]).includes(element as DragonElement)) {
+            weaknesses.push(element as DragonElement)
+        }
+    }
+
+    return weaknesses
 }
