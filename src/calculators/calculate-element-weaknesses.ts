@@ -7,9 +7,9 @@ export function calculateElementWeaknesses(element: string) {
 
     const weaknesses: DragonElement[] = []
 
-    for (const element in elementSettings) {
-        if ((elementSettings[element as DragonElement].strengths as DragonElement[]).includes(element as DragonElement)) {
-            weaknesses.push(element as DragonElement)
+    for (const key in elementSettings) {
+        if ((elementSettings[key as DragonElement].strengths as DragonElement[]).includes(element as DragonElement)) {
+            weaknesses.push(key as DragonElement)
         }
     }
 
