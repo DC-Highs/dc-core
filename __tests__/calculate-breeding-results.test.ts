@@ -117,4 +117,24 @@ describe('calculateBreedingResults', () => {
         expect(mergedResult?.chance).toBe(50)
         expect(mergedResult?.requiredEmpower).toBe(0)
     })
+
+    it('should correctly maximize chance when merging multiple soulmate sources', () => {
+        const doubleSoulmateConfig = {
+            ...mockConfig,
+            soulmates: [
+                { parent_1_id: 1, parent_2_id: 2, dragon_id: 101, chance: 10, level_parents: 15 },
+                { parent_1_id: 1, parent_2_id: 2, dragon_id: 101, chance: 65, level_parents: 15 } 
+            ]
+        }
+        
+        const results = calculateBreedingResults({
+            parent1: { id: 1, elements: ["terra"], level: 20 },
+            parent2: { id: 2, elements: ["flame"], level: 20 },
+            config: doubleSoulmateConfig
+        })
+
+        const mergedResult = results.find(r => r.dragonId === 101)
+        expect(mergedResult).toBeDefined()
+        expect(mergedResult?.chance).toBe(65)
+    })
 })
